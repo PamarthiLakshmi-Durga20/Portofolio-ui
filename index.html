@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamarthi Lakshmi Durga | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Portofolio</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hi, I’m <span>Pamarthi Lakshmi Durga</span></h1>
+            <p>Final-year B.Tech Student | AI & Data Science | Building Innovative Solutions</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>To utilize my skills effectively, keep learning and improving, and work sincerely in a reputed organization where I can contribute to its growth while building my own career.</p>
+        <h3>Education:</h3>
+        <ul>
+            <li><b>Seshadri Rao Gudlavalleru Engineering College, Gudlavalleru</b> (2023 - 2026)<br>B.Tech in AI & Data Science</li>
+            <li><b>Sri Vasavi Institute Of Engineering and Technology, Nandamuru</b> (2020 - 2023)<br>Diploma in Computer Science Engineering</li>
+            <li><b>Sri Sai English Medium High School, Machilipatnam</b> (2019 - 2020)<br>Secondary School Certificate (SSC)</li>
+        </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">Java Basics</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">SQL</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Waste Management System (CSP Project)</h3>
+            <p>Python & web-based project on plastic waste awareness; GitHub repo available.</p>
+        </div>
+        <div class="project">
+            <h3>EV Charge & Range Dashboard</h3>
+            <p>Interactive Tableau dashboard integrated with website using MySQL.</p>
+        </div>
+        <div class="project">
+            <h3>Unemployment Rate Prediction</h3>
+            <p>ML models (Linear Regression, Random Forest, XGBoost) with Streamlit frontend.</p>
+        </div>
+        <div class="project">
+            <h3>Rythu Seva – Pesticides & Fertilizers</h3>
+            <p>Basic frontend website using HTML, CSS, JavaScript (In-progress).</p>
+        </div>
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+            <p>This website.</p>
+        </div>
+    </section>
+
+    <!-- Certifications & Internships -->
+    <section id="certifications">
+        <h2>Certifications & Internships</h2>
+        <ul>
+            <li>Data Analytics With Tableau - SmartBridge</li>
+            <li>NPTEL - Introduction to Internet of Things (Silver Medal)</li>
+            <li>Generative AI Certificate - SmartBridge</li>
+            <li>6-Month Industrial Training Certificate - Arete IT Services</li>
+            <li>Web Development Certificate</li>
+            <li>Internships:
+                <ul>
+                    <li>SmartBridge - Data Analytics With Tableau (1 Month)</li>
+                    <li>SmartBridge - Generative AI (1 Month)</li>
+                    <li>Arete IT Services - Industrial Training (6 Months, During Diploma)</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:pamarthidurga20@gmail.com">pamarthidurga20@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/pamarthi-lakshmi-durga-78480a212">linkedin.com/in/pamarthi-lakshmi-durga</a></p>
+        <p>GitHub: <a href="https://github.com/PamarthiLakshmi-Durga20">github.com/PamarthiLakshmi-Durga20</a></p>
+        <p>Location: Machilipatnam, Krishna District, Andhra Pradesh, 521001</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pamarthi Lakshmi Durga</p>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.2 });
+        sections.forEach(section => observer.observe(section));
+
+        // Back-to-top button
+        const btn = document.createElement('button');
+        btn.innerHTML = '↑';
+        btn.id = 'topBtn';
+        document.body.appendChild(btn);
+
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 300){
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
